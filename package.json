@@ -1,0 +1,15 @@
+{
+  "name": "studysphere",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Byte Breakers Beta-20",
+  "license": "ISC",
+  "description": "Online Study Material and Discussion Platform",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
