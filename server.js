@@ -10,8 +10,11 @@ const ejsMate = require("ejs-mate");
 const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken');
 const {v4 : uuidv4} = require('uuid');
+require('dotenv').config();
 
 let MONGO_URL = "mongodb://127.0.0.1:27017/studysphere";
+
+
 
 main()
     .then(() => {
@@ -25,7 +28,6 @@ async function main(){
     mongoose.connect(MONGO_URL);
 }
 
-let port = 8080;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, ("views")));
@@ -179,6 +181,7 @@ app.get("/collaborate/done", (req, res) => {
 });
 
 
+const port = process.env.PORT || 8080;
 app.listen(port, () =>{
     console.log(`server is listening on port ${port}`);
 });

@@ -11,6 +11,7 @@
   "description": "Online Study Material and Discussion Platform",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.21.1",
