@@ -1,0 +1,19 @@
+<%= layout("/layouts/boilerplate.ejs") %>
+
+<form class="col-8 offset-2" method="post" action="/discussion">
+    <div class="mt-5 mb-5">
+      <label for="user" class="form-label">Enter Your Username</label>
+      <input type="text" name="from" class="form-control" id="user">
+    </div>
+    <div class="mb-5">
+      <label for="message" class="form-label">
+        Explain Your Doubt and Ask Something
+      </label>
+      <input type="text" name="msg" class="form-control" id="message">
+    </div>
+    <div class="mb-5 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary mb-5">Submit</button>
+</form>

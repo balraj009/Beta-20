@@ -1,19 +1,39 @@
 <%= layout("/layouts/boilerplate.ejs") %>
 
-<section class="discussions">
-    <h2>Active Discussions</h2>
-    <div class="discussions-list">
-        <div class="discussion-item">
-            <h3>Understanding Quantum Mechanics</h3>
-            <p>Started by: Alice Brown</p>
-            <p>Posts: 34</p>
-            <a href="/forums/1">Join Discussion</a>
+    <section class="discussions">
+        <h2>Active Discussions</h2>
+
+        <form method="get" action="/discussion/new">
+            <button class="askDoubt">Ask your Doubt</button>
+        </form>
+
+        <div class="discussions-list">
+            <% for(let chat of chats){ %>
+                <div class="discussion-item">
+                    <h3>Started by: <%= chat.from %>
+                    </h3>
+                    <p class="msg">Msg: <%= chat.msg %>
+                    </p>
+
+                    <h5 style="font-weight: normal; font-style: italic; margin-top: 8px; text-align: end;">Recieved by: <%= chat.to %></h5>
+
+                    <form method="get" action="/discussion/<%= chat._id %>/join">
+                        <button class="edit black" id="myButton">Join Discussion</button>
+                    </form>
+
+                    <hr>
+
+                    <p class="right">
+                        <%= chat.created_at.toString().split(" ")[4] %> 
+                    </p>
+                    <p class=" right">
+                        <%= chat.created_at.toString().slice(0, 15) %>
+                    </p>
+
+                    <form method="post" action="/discussion/<%= chat._id %>?_method=DELETE">
+                        <button class="deleteDiscussion">Delete Discussion</button>
+                    </form>
+                </div>
+                <% } %>
         </div>
-        <div class="discussion-item">
-            <h3>Tips for Effective Study Habits</h3>
-            <p>Started by: Bob Green</p>
-            <p>Posts: 27</p>
-            <a href="/forums/2">Join Discussion</a>
-        </div>
-    </div>
-</section>
+    </section>

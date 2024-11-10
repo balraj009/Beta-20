@@ -1,4 +1,5 @@
-body, * {
+body,
+* {
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
@@ -87,15 +88,17 @@ body, * {
         flex-direction: column;
         display: none;
     }
+
     .navbar-menu.active {
         display: flex;
     }
+
     .navbar-toggle {
         display: flex;
     }
 }
 
-i{
+i {
     background-color: white;
 }
 
@@ -105,15 +108,17 @@ i{
         flex-direction: column;
         display: none;
     }
+
     .navbar-menu.active {
         display: flex;
     }
+
     .navbar-toggle {
         display: flex;
     }
 }
 
-i{
+i {
     background-color: white;
 }
 
@@ -144,19 +149,28 @@ h2 {
     color: #0044cc;
 }
 
-.feature-list, .materials-list, .discussions-list, .sessions-list, .testimonials-list, .recommendations-list {
+.feature-list,
+.materials-list,
+.discussions-list,
+.sessions-list,
+.testimonials-list,
+.recommendations-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.feature-item, .testimonials-item, .recommendations-item {
+.feature-item,
+.testimonials-item,
+.recommendations-item {
     flex: 1 1 30%;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
+
 
 footer {
     background-color: #62825D;
@@ -193,6 +207,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     transition: box-shadow 0.3s ease;
+    position: relative;
 }
 
 .discussion-item:hover {
@@ -210,19 +225,54 @@ footer {
     margin: 5px 0;
 }
 
-.discussion-item a {
+.discussion-item .deleteDiscussion {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #0044cc;
+    background-color: black;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    float: right;
+}
+
+.discussion-item button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #0044cc;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: none;
+
+}
+
+.discussion-item button:hover {
+    background-color: #003399;
 }
 
 .discussion-item a:hover {
-    background-color: #003399;
+    opacity: 0.7;
+}
+
+.discussion-item .msg {
+    color: #526E48;
+    font-weight: bold;
+}
+
+.discussions .askDoubt {
+    padding: 5px 15px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+}
+
+.discussions .askDoubt:hover {
+    opacity: 0.8;
 }
 
 /* Material */
@@ -284,3 +334,216 @@ footer {
 .material-item a:hover {
     background-color: #003399;
 }
+
+/*Quiz Section*/
+.quiz {
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-container {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.question li {
+    margin-bottom: 10px;
+}
+
+.quiz-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9EDF9C;
+}
+
+/* Watch Video Section */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 250px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #9EDF9C;
+}
+
+.row {
+    margin: 50px;
+}
+
+.vid {
+    height: 60%;
+    width: 100%;
+    background-color: #9EDF9C;
+    margin-top: 20px;
+    text-align: center;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+
+}
+
+h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Pdf Section */
+#ss {
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#jj, #te, #mc {
+    width: 25%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+#vv {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Profile Page */
+.profile-container {
+    background: rgb(127, 238, 219);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-header h1 {
+    margin: 0;
+}
+
+.profile-header p {
+    color: #666;
+    font-size: 10px;
+}
+
+.profile-content h2 {
+    margin-top: 20px;
+    color: #08fbd7;
+}
+
+.profile-content p,
+.profile-content ul {
+    margin: 10px 0;
+    color: #333;
+}
+
+button {
+    background-color: #ff0019;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Collaborate Page */
+#xsx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#xax{
+    margin-top: 100px;
+}
+#tre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#trr{
+    width: 50vw;
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+#z{
+    text-decoration: none;
+    color: white;
+}
+
+/* Appointment done */
+

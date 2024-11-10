@@ -1,0 +1,28 @@
+<%= layout("/layouts/boilerplate.ejs") %>
+
+    <h2 style="margin: 5px 0 5px 0;">Reply the Doubt Here</h3>
+
+        <h4 style="margin: 10px 0; color: gray;">Doubt Id: <%= discussion._id %>
+        </h4>
+
+        <form class="mt-5" method="post" action="/discussion/<%= discussion._id %>?_method=PUT">
+
+            <div class="mb-3">
+                <label for="user" class="form-label">Post Username</label>
+                <input type="text" name="from" class="form-control" id="user" placeholder="<%= discussion.from %>">
+            </div>
+
+            <div class="mb-3">
+                <label for="massage" class="form-label">Dobut</label>
+                <textarea class="form-control" name="msg" id="massage"
+                    rows="3"><%= discussion.msg %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reply : </textarea>
+
+                <div class="mb-3">
+                    <label for="user" class="form-label">Enter your Username</label>
+                    <input type="text" name="to" class="form-control" id="user" placeholder="Username">
+                </div>
+
+                <button type="submit" class="btn btn-primary mb-5">Submit</button>
+            </div>
+
+        </form>
